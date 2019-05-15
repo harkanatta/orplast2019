@@ -1,0 +1,7 @@
+base
+magrittr
+kableExtra
+leaflet
+DT
+plyr
+networkD3
