@@ -126,6 +126,19 @@ tafla <- as.data.frame(tafla)
 Algengustu plastefnin eru flokkuð í 6 algengustu gerðir plasts en allt annað plast lendir í 7 flokknum. Í þeim flokki eru allskonar samsett plast líkt og notað er í báta, filmur, lakk og pólýúretön, blöðrur og hjólbarðar.
 
 ---
+class: center, inverse
+# Hvað er plast?
+## Myndun fyrsta plastefnisins „Bakelite“
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width='100%'}
+knitr::include_graphics("https://thumbs.gfycat.com/BaggyWarlikeAmericancrow-size_restricted.gif")
+```
+
+
+???
+Fyrsta plastefnið, Bakelite, var fundið upp um aldamótin 1900
+Fenól og formaldehýð hitað og hrært saman við brennisteinssýru til að mynda fenólformaldehýðresín sem er fyrsta plastefnið eða plastresínið.
+
+---
 
 class: center
 # Hvað er plast?
@@ -149,19 +162,6 @@ Pólýstýren er myndað með fjölliðun á stýreni.
 https://www.youtube.com/watch?v=BCNWav12PdI
 
 ---
-class: center, inverse
-# Hvað er plast?
-## Myndun fyrsta plastefnisins „Bakelite“
-```{r echo=FALSE, message=FALSE, warning=FALSE, out.width='100%'}
-knitr::include_graphics("https://thumbs.gfycat.com/BaggyWarlikeAmericancrow-size_restricted.gif")
-```
-
-
-???
-Fyrsta plastefnið, Bakelite, var fundið upp um aldamótin 1900
-Fenól og formaldehýð hitað og hrært saman við brennisteinssýru til að mynda fenólformaldehýðresín sem er fyrsta plastefnið eða plastresínið.
-
----
 
 class:center, middle, inverse
 .Large[Fyrsta tilkynning um örplast 1972]
@@ -169,6 +169,8 @@ class:center, middle, inverse
 knitr::include_graphics("myndir/grndv1.png")
 ```
 
+???
+Árið 1972 (Carpender ofl.) var tilkynnt um pólýstýren í hafi sem hefðu bakteríur á yfirborði sínu. Áður hafði fólk lengi tekið eftir því hve plast var slitþolið og entist lengi í umhverfinu og að það fyndist í maga fugla og annarra dýra.
 ---
 
 class:center, middle, inverse
@@ -176,7 +178,8 @@ class:center, middle, inverse
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width='100%'}
 knitr::include_graphics("myndir/grndv2.png")
 ```
-
+???
+Árið 1991 kom út grein (eftir V. Zitko) þar sem bent var á að í snyrtivörum væru smáar plastagnir sem bærust í hafið
 ---
 
 class:center, middle, inverse
@@ -186,9 +189,7 @@ knitr::include_graphics("myndir/grndv3.png")
 ```
 
 ???
-Árið 1972 (Carpender ofl.) var tilkynnt um pólýstýren í hafi sem hefðu bakteríur á yfirborði sínu. Áður hafði fólk lengi tekið eftir því hve plast var slitþolið og entist lengi í umhverfinu og að það fyndist í maga fugla og annarra dýra.
-Árið 1991 kom út grein (eftir V. Zitko) þar sem bent var á að í snyrtivörum væru smáar plastagnir sem bærust í hafið
-Árið 2004 var hugtakið „microplastic“ sett fram (Thompson) í grein þar sem sýni úr sjávarseti voru skoðuð með litrófssjá og um 9 gerðir plasts fundust í þeim þ.á.m. úr fatnaði, pakkningum, reipum o.fl. Einnig voru þörungasýni greind aftur í tímann til 1960 og sást þá skýrt að eftir því sem framleiðsla á plasti eykst fjölgar plastögnum í hafinu.
+Árið 2004 var hugtakið „microplastic“ sett fram (Thompson) í grein þar sem sýni úr sjávarseti voru skoðuð með litrófssjá og um 9 gerðir plasts fundust í þeim þ.á.m. úr fatnaði, pakkningum, reipum o.fl. Einnig voru þörungasýni ^[þörungasnið eru tekin úr efri lögum sjávar úti á opnu hafi sem og nærri ströndum] greind aftur í tímann til 1960 og í þeim sást skýrt að eftir því sem framleiðsla á plasti jókst fjölgaði plastögnum í hafinu.
 
 ---
 
@@ -277,64 +278,160 @@ Verður til við sundrun plasts í náttúrunni
 
 
 ---
+
+
+
+class:center, middle
+.Large[Örplast á reki í hafinu]
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width='80%'}
+knitr::include_graphics("myndir/DriftDensity_isobe2014.png")
+```
+ 
+???
+Þéttleiki smárra plastagna á reki í hafinu. Lárétti ásinn stendur fyrir fjarlægð frá landi og lóðrétti ásinn stærð plastagnanna sem fengust í háf við yfirborðið. Litaskalinn táknar þéttleika agnanna. Þéttleiki yfir 0,005 stk/m~3~ er innan línanna á myndinni (Isobe, 2014).
+
+---
+
+class:center, middle, inverse
+.Large[Hugtakið „microplastic“ sett fram 2004]
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width='100%'}
+knitr::include_graphics("myndir/grndv3.png")
+```
+
+???
+Árið 2004 var hugtakið „microplastic“ sett fram (Thompson) í grein þar sem sýni úr sjávarseti voru skoðuð með litrófssjá og um 9 gerðir plasts fundust í þeim þ.á.m. úr fatnaði, pakkningum, reipum o.fl. Einnig voru þörungasýni ^[þörungasnið eru tekin úr efri lögum sjávar úti á opnu hafi sem og nærri ströndum] greind aftur í tímann til 1960 og í þeim sást skýrt að eftir því sem framleiðsla á plasti jókst fjölgaði plastögnum í hafinu.
+
+---
+
+class: center, middle
+.Large[Hugtakið „microplastic“ sett fram 2004]
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width='100%'}
+knitr::include_graphics("myndir/small-plastics.png")
+```
+
+---
+
+
+class: center, middle
+.Large[Hugtakið „microplastic“ sett fram 2004]
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width='100%'}
+knitr::include_graphics("myndir/flaedirit.png")
+```
+
+---
+class: center, middle
+.Large[Einkennandi farvegir fyrir mismunandi uppsprettur örplasts]
+```{r fartafla, fig.cap='*Vegryk á við um hjólbarða og vegmerkingar', echo=FALSE, message=FALSE, warning=FALSE, out.width='60%'}
+library(knitr)
+library(kableExtra)
+
+collapse_rows_dt <-
+  data.frame(
+    A = c(rep('Rennandi vatn', 11),'Andrúmsloft',rep('Hafið', 3),rep('Annað', 3)),
+    B = c(rep('Fráveita: skólp og ofanvatn', 8),rep('Ár, lækir og skurðir',3),'Vindur',rep('Hafstraumar/sjávarföll', 3),'Sigvatn','Landgræðsla','Snjómokstur'),
+    C = c(c('Fatnaður','Snyrtivörur','Plastframleiðsla','Gervigrasvellir','Leiksvæði','Skósólar'),
+        c('Vegryk*','Málning','Heyrúlluplast','Haglaskot','Plastrusl'),
+          'Vegryk*',
+        c('Veiðarfæri', 'Búnaður í sjókvíaeldi', 'Plastrusl í hafinu'),
+        'Örplast frá urðunarstöðum',
+        'Áburður úr seyru',
+        'Vegryk*'))
+
+colnames(collapse_rows_dt) <- c('Gerð farvegs', 'Farvegur', 'Uppsprettur í farvegi')
+
+
+kable(collapse_rows_dt, align = "c") %>%
+  kable_styling("striped",full_width = T, font_size = 12) %>%
+  column_spec(1, bold = T) %>%
+  collapse_rows(columns = 1:2, valign = "middle")
+
+
+```
+
+---
+
+class: center, middle
+.Large[Fjögur megin vatnasvæði Íslands]
+```{r vatnasvidsv, fig.cap='Fjögur megin vatnasvæði Íslands. Skálínurnar liggja yfir vatnasvæði nr. 104 á suðvesturhorni landsins', out.width='100%', fig.align='center', echo=FALSE}
+knitr::include_graphics("myndir/map.png")
+```
+
+---
+
+```{r message=FALSE, warning=FALSE, include=FALSE}
+library(BiocStyle)
+```
+
+class: center, middle
+
+```{r skolp, echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, dev=switch(output(), html = "svg", latex = "pdf"), dev.args=list(bg="transparent"), out.width='60%', fig.cap="Tegund skólphreinsunar skipt eftir fjórum flokkum náttúrulegra yfirborðsvatnshlota. Unnið upp úr samantekt á stöðu skólpmála á Íslandi árið 2014 (Umhverfisstofnun, 2017)." }
+
+par(mar=c(4,4,4,2))
+
+roundUpNice <- function(x, nice=c(1,2,4,5,6,8,10)) {
+  if(length(x) != 1) stop("'x' must be of length 1")
+  10^floor(log10(x)) * nice[[which(x <= 10^floor(log10(x)) * nice)[[1]]]]
+} # https://stackoverflow.com/questions/6461209/how-to-round-up-to-the-nearest-10-or-100-or-x
+
+skólptölur <- read.csv("skjol/skolp_urban.csv", sep="\t",encoding = "UTF-8")
+skólptölur <- skólptölur[!is.na(skólptölur$Magn.skólps..pe..)& skólptölur$Magn.skólps..pe..>0,]
+levels(skólptölur$Tegund.hreinsunar) <- c("Eins þreps","Ekki vitað","Engin","Ítarleg","Ítarleg","Ítarleg","Rotþrær","Tveggja þrepa","Tveggja þrepa") #Hreinsa gögnin
+require(plyr)
+svaedi <- ddply(skólptölur,.(Svæði,Tegund.hreinsunar),summarise,Magn=sum(Magn.skólps..pe..),.drop=F)
+skólp_fylki <- matrix(svaedi$Magn,nrow = length(levels(as.factor(svaedi$Tegund.hreinsunar))),ncol = length(unique(svaedi$Svæði)),dimnames=list(levels(as.factor(svaedi$Tegund.hreinsunar)),levels(svaedi$Svæði)))
+
+landshlutar <- c('(NV)','(NA)','(SA)','(SV)')
+colnames(skólp_fylki) <- paste(unique(svaedi$Svæði),landshlutar,sep="\n")
+
+litir <- c('#7ECEF0','white','#CB5600', '#7F7CAF','#28587B','seashell')
+bp <- barplot(skólp_fylki,ylab='',xlab='',axes=F,beside=TRUE,ylim=c(0,max(skólp_fylki)*1.1))
+abline(h=seq(0,roundUpNice(1.1*max(skólp_fylki)),roundUpNice(1.1*max(skólp_fylki))/5), col = 'lightgray', lty = 3)
+barplot(skólp_fylki, main='Tegund skólphreinsunar', ylab="Magn (þúsundir pe.)", beside=TRUE, axes = F, col=litir ,ylim = c(0,max(skólp_fylki)*1.1),add=T);box()
+axis(2,seq(0,roundUpNice(1.1*max(skólp_fylki)),roundUpNice(1.1*max(skólp_fylki))/5),labels = seq(0,roundUpNice(1.1*max(skólp_fylki))/1000,roundUpNice(1.1*max(skólp_fylki))/5000),las=2)
+legend('topleft', levels(as.factor(svaedi$Tegund.hreinsunar)), fill=litir)
+```
+
+???
+Tegund skólphreinsunar skipt eftir fjórum flokkum náttúrulegra yfirborðsvatnshlota. Unnið upp úr samantekt á stöðu skólpmála á Íslandi árið 2014 [@Umhverfisstofnun2017].
+---
+
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
 ```
 
 ```{r Sank, echo=FALSE, message=FALSE, warning=FALSE}
-#, fig.cap='Helstu uppsprettur örplasts á Íslandi og hlutfallsleg skipting þeirra eftir því hvort afdrif þess eru í haf eða í jarðveg.'}
 
-# libs <- c("rgdal", "maptools", "gridExtra","tmap","tmaptools","sp")
-# lapply(libs, require, character.only = TRUE)
-# 
-# malbik <- rgdal::readOGR("C:/Users/BioPol VS/Documents/Vinnumappa/GIS/IS50V_SAMGONGUR_17062016_ISN2004/IS50V_SAMGONGUR_SHP/vegir1og5.shp",require_geomType = "wkbLineString")
-# byggd <- rgdal::readOGR("C:/Users/BioPol VS/Documents/Vinnumappa/GIS/IS50V_MANNVIRKI_17062016_ISN2004/IS50V_MANNVIRKI_SHP/is50v_mannvirki_flakar_17062016.shp")
-# clp1 <- raster::intersect(malbik,byggd)
-# sum(as.numeric(as.character(clp1@data$lengd)))/sum(as.numeric(as.character(malbik@data$lengd))) #Hlutfall lengdar malbiks innan þéttbýlis = 36%
+#losun <- (l+h)/2 #Meðaltal lægra og hærra mats á losun.
+value <- c(379, 41, 18.2+11.8+3.2, 3, 8.2, 0.34) #Uppspretta lægra mat
+losun <- c(164, 5.7, 12+3.2, 0.3, 8.2, 0.34) #losun lægra mat
+#value <- c(379,586,38,233,21,48,3,11,8,32,0.3,3)
+heiti <-c('Dekkjaslit','Vegmerkingar','Húsamálning','Gervigras','Þvottur','Snyrtivörur')
+land <- value-losun
+df <- data.frame(heiti,land,losun)
+df <- df[order(df$heiti),]
 
-Magn = c(379,586,38,233,21,48,3,11,8,32,6,60,0.3,3)
-l <- c((0.74)*Magn[1]*0.6+(1-0.74)*Magn[1]*0.1, # Dekkjaslit, lægra mat út frá því hve mikið fer í jarðveg eða ræsi [@Verschoor2016] 3/4 umferðar hið minnsta er í þéttbýli
-       (0.34)*Magn[3]*0.6+(1-0.34)*Magn[3]*0.1, # Vegmerkingar, lægra mat út frá því hve mikið fer í jarðveg eða ræsi [@Verschoor2016] 36% malbiks (hið minnsta) er í þéttbýli (út frá IS50V)
-       (0.69)*Magn[5]*0.6+(1-0.69)*Magn[5]*0.1, # Málning, hlutfall sem fer í ræsi og jarðveg byggt á sömu forsendum og dekkjaslit og vegmerkingar (skipti ekki í inni- og útimálningu)
-       Magn[7]*0.6, # Gervigras er allt í þéttbýli og því er reiknað með að um 60% endi í ræsum
-       Magn[9], # Þvottur fer beint í hafið
-       Magn[13]) # Snyrtivörur fara beint í hafið
-
-h <- c((0.74)*Magn[2]*0.6+(1-0.74)*Magn[2]*0.1, # Dekkjaslit, lægra mat út frá því hve mikið fer í jarðveg eða ræsi [@Verschoor2016] 3/4 umferðar hið minnsta er í þéttbýli
-       (0.34)*Magn[4]*0.6+(1-0.34)*Magn[4]*0.1, # Vegmerkingar, lægra mat út frá því hve mikið fer í jarðveg eða ræsi [@Verschoor2016] 36% malbiks (hið minnsta) er í þéttbýli (út frá IS50V)
-       (0.69)*Magn[6]*0.6+(1-0.69)*Magn[6]*0.1, # Málning, hlutfall sem fer í ræsi og jarðveg byggt á sömu forsendum og dekkjaslit og vegmerkingar (skipti ekki í inni- og útimálningu)
-       Magn[8]*0.6, # Gervigras er allt í þéttbýli og því er reiknað með að um 60% endi í ræsum
-       Magn[10], # Þvottur fer beint í hafið
-       Magn[14]) # Snyrtivörur fara beint í hafið
-
-losun <- (l+h)/2 #Meðaltal lægra og hærra mats á losun.
-value <- c(379,586,38,233,21,48,3,11,8,32,0.3,3)
-heiti <-rep(c('Dekkjaslit','Vegmerkingar','Málning','Gervigras','Þvottur','Snyrtivörur'),each=2)
-df <- data.frame(value,heiti)
-df$losun <- rep(losun,each=2)
-library(plyr)
-df <- ddply(df,('heiti'),summarise,heild=mean(value),losun=mean(losun))
-df$land <- df$heild-df$losun
-#DF <- data.frame(heiti=rep(df$heiti,2),losun=c(df$land,df$losun),vdtk=rep(c('land','sjor'),each=6))
 library(networkD3)
-nodes <-
-  c('Dekkjaslit ','Vegmerkingar ','Málning ','Gervigras ','Þvottur ','Snyrtivörur ')
-nodes <- as.data.frame(c(nodes[order(nodes)], 'Land ','Haf '))
+nodes <- c(levels(df$heiti), 'Land ','Haf ')
+nodes <- as.data.frame(nodes)
 names(nodes) <- "name"
-#nodes$name <-  as.character(nodes$name)
-value <- rbind(matrix(c(df[1,c(3,4)])),matrix(c(df[2,c(3,4)])),matrix(c(df[3,c(3,4)])),matrix(c(df[4,c(3,4)])),matrix(c(df[5,c(3,4)])),matrix(c(df[6,c(3,4)])))
+
+a <- list()
+for (i in 1:nrow(df)) {
+  a[i] <- list(rbind(matrix(c(df[i,c(2,3)]))))
+}
+b <- do.call(c,a)
+value <- unlist(b)
+
 links <- 
   data.frame(
-    source=c(0,0,1,1,2,2,3,4,5,5),
-    target=c(7,6,7,6,7,6,7,7,7,6),
-    value=unlist(value[-c(8,10)])
-  )
-
+    source=c(0,0,1,1,2,2,3,3,4,4,5,5),
+    target=c(6,7,6,7,6,7,6,7,6,7,6,7),
+    value=value)
 
 
 Sank <- list(nodes, links)
 names(Sank) <- c('nodes', 'links')
-sankeyNetwork(
+sn <- sankeyNetwork(
   Links = Sank$links,
   Nodes = Sank$nodes,
   Source = "source",
@@ -343,40 +440,71 @@ sankeyNetwork(
   NodeID = "name",
   units = "tonn",
   colourScale = JS("d3.scaleOrdinal(d3.schemeCategory20);"),
-  fontSize = 26,
-  nodeWidth = 30,
-  width = 800,
-  height = 600
+  fontSize = 12,
+  nodeWidth = 30
 )
-
+#sn
+#if (knitr::is_html_output()) {
+  htmlwidgets::onRender(sn, 'document.getElementsByTagName("svg")[0].setAttribute("viewBox", "")') #Svo að þetta sé ekki ofursmátt í Firefox
+#}
 
 ```
 
 ???
 
 Stærsta uppspretta örplasts í umhverfinu á Íslandi, sem lagt var mat á, er tengd bifreiðaumferð. Slit á dekkjum og vegmerkingum er um 60-85% örplastslosunar á Íslandi
+
+---
+class:middle
+.pull-left[
+```{r umferdvisitala1, echo=FALSE, fig.align="center", fig.cap="Vísitala umferðar (línur) ásamt meðalumferðarþunga yfir árið (stöplar) í þremur völdum sniðum innan höfuðborgarsvæðisins og á 16 lykilteljurum á hringveginum.", message=FALSE, warning=FALSE, dev=switch(output(), html = "svg", latex = "pdf"), dev.args=list(bg="transparent"), out.width='100%' }
+
+roundUpNice <- function(x, nice=c(1,2,4,5,6,8,10)) {
+  if(length(x) != 1) stop("'x' must be of length 1")
+  10^floor(log10(x)) * nice[[which(x <= 10^floor(log10(x)) * nice)[[1]]]]
+} # https://stackoverflow.com/questions/6461209/how-to-round-up-to-the-nearest-10-or-100-or-x
+
+
+
+litura="#cb5600"
+liturb="#0698d3"
+
+rvk <- c(134529,140215,150318,162347,166900)
+lndsb <- c(59959,63580,72650,79920,83575)
+nicebil <- seq(0,roundUpNice(max(rvk)),roundUpNice(max(rvk))/8)
+xas <- seq(2005,2018,1)
+rass <- matrix(data = c(0,0,0,0,0,0,0,0,0,rvk,0,0,0,0,0,0,0,0,0,lndsb),nrow = 2,byrow = T,dimnames = list(c("Rvk","Lndsb"),xas))
+
+
+
+par(mar = c(5,5,2,5))
+bp <- barplot(1.5:14.5,rass+10000, col = NA, border = NA,axes = F)
+par(new=TRUE)
+barplot(rass,beside = T,axes = F,col = c(liturb,litura), border = NA, axisnames = F, ylim = c(0, max(rvk) * 1.1))
+axis(4,nicebil,labels = nicebil/1000,las=2)
+mtext("Meðalumferð á dag yfir árið",side=4,line = 3)
+par(new=TRUE)
+
+hofb <- c(100.00,103.90,113.31,114.30,111.61,110.06,107.63,109.18,112.26,115.61,120.50,129.18,139.52,143.55)
+hring <- c(100.00, 105.86, 113.00, 110.85, 111.71, 109.12, 103.36, 103.05, 106.58, 112.34, 118.94, 135.91, 149.51, 155.93)
+
+plot(xas,hring,type='n',font=2,ylab='Vísitala umferðar (árið 2005 = 100)',xlab='')
+lines(xas,hring,type = 'o',col=litura,pch=16)
+lines(xas,hofb,type = 'o',col=liturb,pch=17)
+
+legend('topleft', c('Hringvegur','Höfuðborgarsvæðið'),lty = 'solid',col=c(litura,liturb),pch=c(16,17))
+
+```
+]
+.pull-right[
+  - blah
+- bleh
+]
 ---
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+---
 
 
 
