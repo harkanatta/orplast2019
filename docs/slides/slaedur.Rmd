@@ -357,6 +357,24 @@ knitr::include_graphics("myndir/map.png")
 ```
 
 ---
+class: center, middle
+.Large[Helstu uppsprettur örplasts í umhverfið]
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width='80%'}
+knitr::include_graphics("myndir/uppsprettur.svg")
+```
+---
+
+class: center, middle
+.Large[Helstu uppsprettur örplasts í umhverfið]
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width='80%'}
+knitr::include_graphics("myndir/uppsam.png")
+```
+---
+background-image: url(myndir/uppsprettur.svg)
+---
+
+background-image: url(myndir/uppsam.svg)
+---
 
 ```{r message=FALSE, warning=FALSE, include=FALSE}
 library(BiocStyle)
