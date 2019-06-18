@@ -354,28 +354,19 @@ knitr::include_graphics("myndir/map.png")
 ---
 class: center, middle
 .Large[Helstu uppsprettur örplasts í umhverfið]
-```{r echo=FALSE, message=FALSE, warning=FALSE, out.width='80%'}
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width='100%'}
 knitr::include_graphics("myndir/uppsprettur.svg")
 ```
 ---
 
-class: center, middle
-.Large[Helstu uppsprettur örplasts í umhverfið]
-```{r echo=FALSE, message=FALSE, warning=FALSE, out.width='80%'}
-knitr::include_graphics("myndir/uppsam.png")
-```
----
-background-image: url(myndir/uppsprettur.svg)
----
-
 background-image: url(myndir/uppsam.svg)
+
 ---
+class: center, middle
 
 ```{r message=FALSE, warning=FALSE, include=FALSE}
 library(BiocStyle)
 ```
-
-class: center, middle
 
 ```{r skolp, echo=FALSE, fig.align='center', message=FALSE, warning=FALSE, dev=switch(output(), html = "svg", latex = "pdf"), dev.args=list(bg="transparent"), out.width='60%', fig.cap="Tegund skólphreinsunar skipt eftir fjórum flokkum náttúrulegra yfirborðsvatnshlota. Unnið upp úr samantekt á stöðu skólpmála á Íslandi árið 2014 (Umhverfisstofnun, 2017)." }
 
