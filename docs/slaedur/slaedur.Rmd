@@ -449,7 +449,7 @@ sn <- sankeyNetwork(
 )
 sn
 #if (knitr::is_html_output()) {
-#  htmlwidgets::onRender(sn, 'document.getElementsByTagName("svg")[0].setAttribute("viewBox", "")') #Svo að þetta sé ekki ofursmátt í Firefox
+  htmlwidgets::onRender(sn, 'document.getElementsByTagName("svg")[0].setAttribute("viewBox", "")') #Svo að þetta sé ekki ofursmátt í Firefox
 #}
 
 ```
