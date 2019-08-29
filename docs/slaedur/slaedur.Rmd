@@ -459,6 +459,11 @@ sn <- sankeyNetwork(
 Stærsta uppspretta örplasts í umhverfinu á Íslandi, sem lagt var mat á, er tengd bifreiðaumferð. Slit á dekkjum og vegmerkingum er um 60-85% örplastslosunar á Íslandi
 
 ---
+```{r echo=FALSE}
+htmltools::includeHTML("SN1.html")
+```
+
+---
 class:middle
 .pull-left[
 ```{r umferdvisitala1, echo=FALSE, fig.align="center", fig.cap="Vísitala umferðar (línur) ásamt meðalumferðarþunga yfir árið (stöplar) í þremur völdum sniðum innan höfuðborgarsvæðisins og á 16 lykilteljurum á hringveginum.", message=FALSE, warning=FALSE, dev=switch(output(), html = "svg", latex = "pdf"), dev.args=list(bg="transparent"), out.width='100%' }
