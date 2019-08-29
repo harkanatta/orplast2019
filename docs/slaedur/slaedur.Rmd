@@ -449,7 +449,7 @@ sn <- sankeyNetwork(
 )
 #sn
 #if (knitr::is_html_output()) {
-  htmlwidgets::onRender(sn, 'document.getElementsByTagName("svg")[0].setAttribute("viewBox", "")') #Svo að þetta sé ekki ofursmátt í Firefox
+#  htmlwidgets::onRender(sn, 'document.getElementsByTagName("svg")[0].setAttribute("viewBox", "")') #Svo að þetta sé ekki ofursmátt í Firefox
 #}
 
 ```
@@ -459,7 +459,7 @@ sn <- sankeyNetwork(
 Stærsta uppspretta örplasts í umhverfinu á Íslandi, sem lagt var mat á, er tengd bifreiðaumferð. Slit á dekkjum og vegmerkingum er um 60-85% örplastslosunar á Íslandi
 
 ---
-```{r echo=FALSE}
+```{r echo=FALSE, results='asis'}
 htmltools::includeHTML("SN1.html")
 ```
 
