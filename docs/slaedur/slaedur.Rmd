@@ -403,7 +403,7 @@ Tegund skólphreinsunar skipt eftir fjórum flokkum náttúrulegra yfirborðsvat
 options(htmltools.dir.version = FALSE)
 ```
 
-```{r Sank, echo=FALSE, message=FALSE, warning=FALSE, fig.width=12, fig.height=10}
+```{r Sank, echo=FALSE, message=FALSE, warning=FALSE, fig.width=6, fig.height=6}
 
 #losun <- (l+h)/2 #Meðaltal lægra og hærra mats á losun.
 value <- c(379, 41, 18.2+11.8+3.2, 3, 8.2, 0.34) #Uppspretta lægra mat
