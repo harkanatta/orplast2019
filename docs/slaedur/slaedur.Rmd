@@ -398,7 +398,7 @@ legend('topleft', levels(as.factor(svaedi$Tegund.hreinsunar)), fill=litir)
 ???
 Tegund skólphreinsunar skipt eftir fjórum flokkum náttúrulegra yfirborðsvatnshlota. Unnið upp úr samantekt á stöðu skólpmála á Íslandi árið 2014 [@Umhverfisstofnun2017].
 ---
-
+# Helstu uppsprettur örplasts
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
 ```
@@ -448,11 +448,14 @@ sn <- sankeyNetwork(
   nodeWidth = 30
 )
 #sn
+library(widgetframe)
+rammi <- frameWidget(sn)
 #if (knitr::is_html_output()) {
-  htmlwidgets::onRender(sn, 'document.getElementsByTagName("svg")[0].setAttribute("viewBox", "")') #Svo að þetta sé ekki ofursmátt í Firefox
+  htmlwidgets::onRender(rammi, 'document.getElementsByTagName("svg")[0].setAttribute("viewBox", "")') #Svo að þetta sé ekki ofursmátt í Firefox
 #}
 
 ```
+
 
 ???
 
