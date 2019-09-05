@@ -322,7 +322,7 @@ sn <- sankeyNetwork(
   units = "tonn",
   colourScale = JS("d3.scaleOrdinal(d3.schemeCategory20);"),
   fontSize = 28,
-  nodeWidth = 30, width = "500px", height = "500px"
+  nodeWidth = 30, width = "500px", height = "500px", fontFamily = "Courier"
 )
 #sn
 library(widgetframe)
@@ -338,22 +338,21 @@ Stærsta uppspretta örplasts í umhverfinu á Íslandi, sem lagt var mat á, er
 
 ---
 class:inverse,center
-.Large[Dekkjaslit (dekkja- og vegaagnir)]
-```{r echo=FALSE, message=FALSE, warning=FALSE, out.width='75%'}
-knitr::include_graphics("myndir/twp.png")
-```
+background-image: url(myndir/dekkjaslit.png)
+#Dekkjaslit
+
 ???
 Dekkjaagnirnar sem myndast við akstur blandast öðrum ögnum sem eru í malbikinu og vegrykinu sem breytir efnasamsetningu agnanna81. Þessi blanda dekkja- og vegslits (e. tyre and road wear particles - TRWP) getur því til viðbótar innihaldið efni á borð við bik, þ.e. úr malbiki101, og ryk frá bremsuborðum/diskum102. Í þessari skýrslu er litið á gúmmíblönduna, ásamt öðrum bætiefnum sem er er blandað saman í slitlagi hjólbarða, sem eina heild óháð fjölliðuinnihaldi.
 
 ---
-
+## Dekkja- og vegaagnir
 .pull-left[
   ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width='100%'}
 knitr::include_graphics("myndir/twp.png")
 ```
 ]
 .pull-right[
- ##Dekkjaslit
+
 
 + Gúmmísólar venjulegra bíldekkja eru gerðir úr blöndu af gervigúmmíi (aðallega stýren bútadíen gúmmí og ýmsum íblöndunarefnum)
 {{content}}
@@ -381,24 +380,11 @@ knitr::include_graphics("myndir/twp.png")
 --
 
 + Dreifbýli - hverfandi magn berst til hafs.
----
-# Dekkjaslit
 
-- Gúmmísólar venjulegra bíldekkja eru gerðir úr blöndu af gervigúmmíi (aðallega stýren bútadíen gúmmí og ýmsum íblöndunarefnum)
-
---
-
-- Agnir á bilinu 10-100 µm (stærra en svifryk)
-
---
-
-- Agnir á bilinu 10-100 µm (stærra en svifryk)
-
-???
-Hlutfall plastfjölliða í slitlagi hjólbarða er á bilinu 40-60%
----
 
 ---
+class:middle
+##Dekkjaslit 
 ```{r akstur, echo=FALSE, cache = TRUE}
 library(RColorBrewer)
 options(OutDec = ",")
@@ -442,7 +428,11 @@ knitr::kable(bifreidar, booktabs=T)
 
 #} 
 ```
-
+<br>
+<br>
+.content-box-red[.justify-center[
+Plastagnir sem eru minni en **5 mm** í tveimur víddum <br> (lengd, hæð eða breidd)
+]]
 
 ---
 
@@ -452,7 +442,7 @@ options(htmltools.dir.version = FALSE)
 
 
 
-```{r  echo=FALSE, message=FALSE, warning=FALSE}
+```{r  echo=FALSE, message=FALSE, warning=FALSE, fig.cap="Skipting örplastlosunar eftir afdrifum í haf eða á land"}
 
 slit=c(244,34,22,79) 
 losun=c(106,15,9,34)
@@ -477,7 +467,7 @@ sn <- sankeyNetwork(
   units = "tonn",
   colourScale = JS("d3.scaleOrdinal(d3.schemeCategory20);"),
   fontSize = 28,
-  nodeWidth = 30, width = "500px", height = "500px"
+  nodeWidth = 30, width = "500px", height = "500px", fontFamily = "Courier"
 )
 #sn
 library(widgetframe)
@@ -490,7 +480,209 @@ rammi
 ???
 Dekkjaslit
 ---
+class:inverse,center
+background-image: url(myndir/flughjolb.png)
+## Hjólbarðar flugvéla
+--
+.content-box-red[.justify-center[
+Talsvert slit við lendingu og flugtak 26-50 t
+]]
 
+--
+.content-box-red[
+
+
++ Sprautuplast og mössun
+{{content}}
+
+]
+
+--
+
++ 87% vegmerkinga Vegagerðarinnar vegna slits
+{{content}}
+
+---
+
+class:inverse,center
+background-image: url(myndir/maxresdefault.jpg)
+.content-box-red[.justify-center[
+#Vegmerkingar
+]]
+
+--
+.content-box-red[
+
+
++ Sprautuplast og mössun
+{{content}}
+
+]
+
+--
+
++ 87% vegmerkinga Vegagerðarinnar vegna slits
+{{content}}
+---
+
+## Vegmerkingar
+.pull-left[
+  ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width='100%'}
+knitr::include_graphics("myndir/vegmerkingarorplast.png")
+```
+]
+.pull-right[
+
+
++ Sprautuplast og mössun
+{{content}}
+
+]
+
+--
+
++ 87% vegmerkinga Vegagerðarinnar vegna slits
+{{content}}
+
+--
+
++ Berast með affallsvatni til sjávar
+{{content}}
+
+--
+
+    + gegnum ræsi í þéttbýli
+    + með ám og lækjum
+
+--
+
++ Mest umferð í þéttbýli - hátt hlutfall dekkjaslits berst til hafs
+--
+
++ Dreifbýli - hverfandi magn berst til hafs.
+
+???
+
+Miðað við útboðsgögn nokkurra stórra sveitarfélaga er notkun sprautuplasts um 0,6 kg á mann á ári í stærri þéttbýlum. Í minni þéttbýlum er algengt að notuð sé málning frekar en plast og í minna magni3. Þar er algengt að um 0,2 kg á mann sé notað af vegamálningu sé notuð árlega.
+
+---
+
+```{r vegmerkingar, echo=FALSE, message=FALSE, warning=FALSE}
+linur <- data.frame(A=c('Stærri sveitarfélög','Minni sveitarfélög',rep('Vegagerðin',2)),
+                    A2=c('Sprautuplast','Málning','Sprautuplast','Málning'),
+                    B=c("254.280","84.170",'',''),
+                    C=c("0,6","0,2",'',''),
+                    D=rep('87%',4),
+                    F=c(110,15,543,218),
+                    G=c('1-25','15-40','1-25','15-40'),
+                    H=c('1-28','2-6','5-135','33-87'),
+                    I=c('0,6-16,8','1,3-3,6','0,5-13,5','3,3-8,7'))
+
+haus <- c('','Gerð vegmerkinga', 'Íbúafjöldi', 'Notkun', 'Notkun v/viðhalds', 'Samtals vegmerkingar','Hlutfall fjölliða','Uppspretta v/slits','Losun í haf')
+names(linur) <- c('','','','kg/mann','','Tonn','%','Tonn','Tonn')
+require(dplyr)
+require(knitr)
+require(kableExtra)
+
+#if (knitr::is_html_output()) {
+  
+kable(linur, caption = 'Áætluð árleg uppspretta örplasts frá vegmerkingum á Íslandi árið 2017.', align = "c") %>%
+  kable_styling(full_width = T) %>%
+  column_spec(1, bold = T) %>%
+  add_header_above(haus) %>%
+  collapse_rows(columns = 1:6, valign = "middle")%>%
+  kable_styling(font_size = 14)
+
+```
+<br>
+<br>
+.content-box-red[.justify-center[
+Plastagnir sem eru minni en **5 mm** í tveimur víddum <br> (lengd, hæð eða breidd)
+]]
+---
+
+
+```{r include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+
+
+```{r  echo=FALSE, message=FALSE, warning=FALSE, fig.cap="Skipting örplastlosunar frá vegmerkingum eftir notendum (stærri og minni sveitarfélög og Vegagerðin) og gerð (sprautuplast/vegamálning)."}
+
+nodes <- c('Stærri sveitarfélög ','Minni sveitarfélög ','Vegagerðin ','Sprautuplast ','Vegamálning ','Uppspretta (LM) ','Uppspretta (HM) ','Losun í haf (LM)','Losun í haf (LM)')
+nodes <- as.data.frame(nodes)
+names(nodes) <- "name"
+#nodes$name <-  as.character(nodes$name)
+links <- data.frame(source=c(0,1,2,2,3,4,3,4,5,6),target=c(3,4,3,4,5,5,6,6,7,8),value=c(110,15,543,218,6,35,163,93,5.7,42.6))
+
+Sank <- list(nodes, links)
+names(Sank) <- c('nodes', 'links')
+sn <- sankeyNetwork(
+  Links = Sank$links,
+  Nodes = Sank$nodes,
+  Source = "source",
+  Target = "target",
+  Value = "value",
+  NodeID = "name",
+  units = "tonn",
+  colourScale = JS("d3.scaleOrdinal(d3.schemeCategory20);"),
+  fontSize = 28,
+  nodeWidth = 30, width = "500px", height = "500px", fontFamily = "Courier"
+)
+#sn
+library(widgetframe)
+rammi <- frameWidget(sn)
+rammi
+
+```
+
+
+???
+Vegmerkingar
+---
+
+class:inverse,center
+background-image: url(myndir/37335569_10156265971825042_1132775165936009216_n.jpg)
+.content-box-red[.justify-center[
+#Málning
+]]
+
+--
+.content-box-red[
+
+
++ Sprautuplast og mössun
+{{content}}
+
+]
+
+--
+
++ 87% vegmerkinga Vegagerðarinnar vegna slits
+{{content}}
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
 class:center, middle
 .Large[Örplast á reki í hafinu]
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width='80%'}

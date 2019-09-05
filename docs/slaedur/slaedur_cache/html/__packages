@@ -8,3 +8,5 @@ networkD3
 RColorBrewer
 htmlwidgets
 widgetframe
+dplyr
+knitr
