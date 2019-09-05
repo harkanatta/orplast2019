@@ -24,6 +24,9 @@ output:
       highlightLines: true
       countIncrementalSlides: false
 ---
+
+
+
 class: center
 # Hvað er plast?
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width='90%'}
@@ -164,32 +167,18 @@ https://www.youtube.com/watch?v=BCNWav12PdI
 ---
 
 class:center, middle, inverse
-.Large[Fyrsta tilkynning um örplast 1972]
-```{r echo=FALSE, message=FALSE, warning=FALSE, out.width='100%'}
-knitr::include_graphics("myndir/grndv1.png")
-```
-
-???
-Árið 1972 (Carpender ofl.) var tilkynnt um pólýstýren í hafi sem hefðu bakteríur á yfirborði sínu. Áður hafði fólk lengi tekið eftir því hve plast var slitþolið og entist lengi í umhverfinu og að það fyndist í maga fugla og annarra dýra.
----
-
-class:center, middle, inverse
-.Large[Örplast í snyrtivörum 1991]
-```{r echo=FALSE, message=FALSE, warning=FALSE, out.width='100%'}
-knitr::include_graphics("myndir/grndv2.png")
-```
-???
-Árið 1991 kom út grein (eftir V. Zitko) þar sem bent var á að í snyrtivörum væru smáar plastagnir sem bærust í hafið
----
-
-class:center, middle, inverse
 .Large[Hugtakið „microplastic“ sett fram 2004]
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width='100%'}
-knitr::include_graphics("myndir/grndv3.png")
+knitr::include_graphics("myndir/thompson1930.png")
 ```
 
 ???
 Árið 2004 var hugtakið „microplastic“ sett fram (Thompson) í grein þar sem sýni úr sjávarseti voru skoðuð með litrófssjá og um 9 gerðir plasts fundust í þeim þ.á.m. úr fatnaði, pakkningum, reipum o.fl. Einnig voru þörungasýni ^[þörungasnið eru tekin úr efri lögum sjávar úti á opnu hafi sem og nærri ströndum] greind aftur í tímann til 1960 og í þeim sást skýrt að eftir því sem framleiðsla á plasti jókst fjölgaði plastögnum í hafinu.
+
+Árið 1972 (Carpender ofl.) var tilkynnt um pólýstýren í hafi sem hefðu bakteríur á yfirborði sínu. Áður hafði fólk lengi tekið eftir því hve plast var slitþolið og entist lengi í umhverfinu og að það fyndist í maga fugla og annarra dýra.
+
+Árið 1991 kom út grein (eftir V. Zitko) þar sem bent var á að í snyrtivörum væru smáar plastagnir sem bærust í hafið
+
 
 ---
 
@@ -217,8 +206,11 @@ axis(1,bp,pub.trend[,1])
 ```
 
 .large[
-Birtingar alþjóðlegra vísindagreina með örplast sem meginviðfangsefni á árunum 2008 til 2018. Fengið af vef [Web of Knowledge](https://webofknowledge.com).
+Birtingar alþjóðlegra vísindagreina með örplast sem meginviðfangsefni á árunum 2008 til 2018. 
 ]
+
+???
+Fengið af vef [Web of Knowledge](https://webofknowledge.com).
 ---
 
 background-image: url(myndir/samsett.png)
@@ -227,8 +219,12 @@ background-position: right
 
 class: left, middle
 
-###Hvað er örplast og <br>
-###Hvaðan kemur það?
+###Slit á hjólbörðum <br>
+###Vegmerkingar<br>
+###Plastframleiðsa <br>
+###Fatnaður<br>
+###Rusl  <br>
+###Snyrtivörur
 
 
 ???
@@ -278,8 +274,222 @@ Verður til við sundrun plasts í náttúrunni
 
 
 ---
+```{r include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+# Helstu uppsprettur örplasts
+
+```{r Sank, echo=FALSE, message=FALSE, warning=FALSE}
+
+#losun <- (l+h)/2 #Meðaltal lægra og hærra mats á losun.
+value <- c(379, 41, 18.2+11.8+3.2, 3, 8.2, 0.34) #Uppspretta lægra mat
+losun <- c(164, 5.7, 12+3.2, 0.3, 8.2, 0.34) #losun lægra mat
+#value <- c(379,586,38,233,21,48,3,11,8,32,0.3,3)
+heiti <-c('Dekkjaslit','Vegmerkingar','Húsamálning','Gervigras','Þvottur','Snyrtivörur')
+land <- value-losun
+df <- data.frame(heiti,land,losun)
+df <- df[order(df$heiti),]
+
+library(networkD3)
+nodes <- c(levels(df$heiti), 'Land ','Haf ')
+nodes <- as.data.frame(nodes)
+names(nodes) <- "name"
+
+a <- list()
+for (i in 1:nrow(df)) {
+  a[i] <- list(rbind(matrix(c(df[i,c(2,3)]))))
+}
+b <- do.call(c,a)
+value <- unlist(b)
+
+links <- 
+  data.frame(
+    source=c(0,0,1,1,2,2,3,3,4,4,5,5),
+    target=c(6,7,6,7,6,7,6,7,6,7,6,7),
+    value=value)
 
 
+Sank <- list(nodes, links)
+names(Sank) <- c('nodes', 'links')
+sn <- sankeyNetwork(
+  Links = Sank$links,
+  Nodes = Sank$nodes,
+  Source = "source",
+  Target = "target",
+  Value = "value",
+  NodeID = "name",
+  units = "tonn",
+  colourScale = JS("d3.scaleOrdinal(d3.schemeCategory20);"),
+  fontSize = 28,
+  nodeWidth = 30, width = "500px", height = "500px"
+)
+#sn
+library(widgetframe)
+rammi <- frameWidget(sn)
+rammi
+
+```
+
+
+???
+
+Stærsta uppspretta örplasts í umhverfinu á Íslandi, sem lagt var mat á, er tengd bifreiðaumferð. Slit á dekkjum og vegmerkingum er um 60-85% örplastslosunar á Íslandi
+
+---
+class:inverse,center
+.Large[Dekkjaslit (dekkja- og vegaagnir)]
+```{r echo=FALSE, message=FALSE, warning=FALSE, out.width='75%'}
+knitr::include_graphics("myndir/twp.png")
+```
+???
+Dekkjaagnirnar sem myndast við akstur blandast öðrum ögnum sem eru í malbikinu og vegrykinu sem breytir efnasamsetningu agnanna81. Þessi blanda dekkja- og vegslits (e. tyre and road wear particles - TRWP) getur því til viðbótar innihaldið efni á borð við bik, þ.e. úr malbiki101, og ryk frá bremsuborðum/diskum102. Í þessari skýrslu er litið á gúmmíblönduna, ásamt öðrum bætiefnum sem er er blandað saman í slitlagi hjólbarða, sem eina heild óháð fjölliðuinnihaldi.
+
+---
+
+.pull-left[
+  ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width='100%'}
+knitr::include_graphics("myndir/twp.png")
+```
+]
+.pull-right[
+ ##Dekkjaslit
+
++ Gúmmísólar venjulegra bíldekkja eru gerðir úr blöndu af gervigúmmíi (aðallega stýren bútadíen gúmmí og ýmsum íblöndunarefnum)
+{{content}}
+
+]
+
+--
+
++ Agnirnar eru á bilinu 10-100 µm (stærra en svifryk)
+{{content}}
+
+--
+
++ Berast með affallsvatni til sjávar
+{{content}}
+
+--
+
+    + gegnum ræsi í þéttbýli
+    + með ám og lækjum
+
+--
+
++ Mest umferð í þéttbýli - hátt hlutfall dekkjaslits berst til hafs
+--
+
++ Dreifbýli - hverfandi magn berst til hafs.
+---
+# Dekkjaslit
+
+- Gúmmísólar venjulegra bíldekkja eru gerðir úr blöndu af gervigúmmíi (aðallega stýren bútadíen gúmmí og ýmsum íblöndunarefnum)
+
+--
+
+- Agnir á bilinu 10-100 µm (stærra en svifryk)
+
+--
+
+- Agnir á bilinu 10-100 µm (stærra en svifryk)
+
+???
+Hlutfall plastfjölliða í slitlagi hjólbarða er á bilinu 40-60%
+---
+
+---
+```{r akstur, echo=FALSE, cache = TRUE}
+library(RColorBrewer)
+options(OutDec = ",")
+# Heildarþyngd ökutækis: Þyngd ökutækis eða vagnlestar með ökumanni, farþegum, farmi og viðfestum vinnutækjum.
+
+
+bifreidar <- matrix(c(227409,23159,2410,8078,2049,2661,9746,17181,12601,14251.6,33693.6,17832,85,102,267,546,132,159,415,850),5,4,byrow = T)
+
+slit_lagt <- bifreidar[1,]*bifreidar[3,]*bifreidar[4,]/1000000000 #Fjöldi*meðalakstur*(slit (mg/ári) lægri talan)
+losun_lagt <- c()
+  for (i in 1:length(slit_lagt)) {
+  losun_lagt[i] <- (2/3)*slit_lagt[i]*0.6+(1/3)*slit_lagt[i]*0 #Verschoor2016
+}
+slit_lagt <- round(slit_lagt,0)
+losun_lagt <- round(losun_lagt,0)
+
+slit_hatt <- bifreidar[1,]*bifreidar[3,]*bifreidar[5,]/1000000000 #Fjöldi*meðalakstur*(slit (mg/ári) hærri talan)
+losun_hatt <- c()
+for (i in 1:length(slit_hatt)) {
+  losun_hatt[i] <- (2/3)*slit_hatt[i]*0.6+(1/3)*slit_hatt[i]*0 #Verschoor2016
+}
+slit_hatt <- round(slit_hatt,0)
+losun_hatt <- round(losun_hatt,0)
+
+slit_ari <- ifelse(slit_hatt>slit_lagt,paste(slit_lagt,slit_hatt,sep = "-"),paste(slit_hatt,slit_lagt,sep = "-"))
+losun_ari <- ifelse(losun_hatt>losun_lagt,paste(losun_lagt,losun_hatt,sep = "-"),paste(losun_hatt,losun_lagt,sep = "-"))
+
+bifreidar[2,] <- round(bifreidar[2,]/1000,2)
+bifreidar[3,] <- round(bifreidar[3,]/1000,2)
+bifreidar <- rbind(bifreidar[1:3,],paste(bifreidar[4,],bifreidar[5,],sep="-"),slit_ari,losun_ari)
+
+colnames(bifreidar) <- c('Fólksbifreið','Sendibifreið','Hópbifreið','Vörubifreið')
+rownames(bifreidar)<- c("Fjöldi","Meðalþyngd (t)","Meðalakstur (þús. km/ár)","Slit (mg/km)", "Slit (t/ár)", "Losun í hafið (t/ár)")
+
+
+#bifreidar <- rbind(icon[c(1,2,3,4)],bifreidar)
+bifreidar <- format(bifreidar,  decimal.mark=",", big.mark=".", scientific=FALSE)
+knitr::kable(bifreidar, booktabs=T)
+#if (knitr::is_html_output()) {
+   # knitr::kable(bifreidar, booktabs=T, caption = "Áætluð árleg losun örplasts í hafið vegna slits á hjólbörðum bifreiða. Fjöldi bíla af mismunandi gerðum í umferð á Íslandi þann 14. ágúst 2018 og meðalakstur skv. Umferðastofu. Með meðalþyngd er átt við heildarþyngd [skv. reglugerð](https://www.reglugerd.is/reglugerdir/allar/nr/155-2007). Byggt á mati Klein (2017) [-@klein2017methods] og Verschoor (2016) [-@Verschoor2016].")
+
+#} 
+```
+
+
+---
+
+```{r include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+
+
+```{r  echo=FALSE, message=FALSE, warning=FALSE}
+
+slit=c(244,34,22,79) 
+losun=c(106,15,9,34)
+land=slit-losun
+
+library(networkD3)
+A <- c("Fólksbifreiðar ","Sendibifreiðar ","Hópbifreiðar ","Vörubifreiðar ","Land ","Haf ")
+nodes <- as.data.frame(A)
+names(nodes) <- "name"
+#nodes$name <-  as.character(nodes$name)
+links <- data.frame(source=rep(0:3,2),target=rep(4:5, each=4),value=c(land,losun))
+
+Sank <- list(nodes, links)
+names(Sank) <- c('nodes', 'links')
+sn <- sankeyNetwork(
+  Links = Sank$links,
+  Nodes = Sank$nodes,
+  Source = "source",
+  Target = "target",
+  Value = "value",
+  NodeID = "name",
+  units = "tonn",
+  colourScale = JS("d3.scaleOrdinal(d3.schemeCategory20);"),
+  fontSize = 28,
+  nodeWidth = 30, width = "500px", height = "500px"
+)
+#sn
+library(widgetframe)
+rammi <- frameWidget(sn)
+rammi
+
+```
+
+
+???
+Dekkjaslit
+---
 
 class:center, middle
 .Large[Örplast á reki í hafinu]
@@ -398,70 +608,67 @@ legend('topleft', levels(as.factor(svaedi$Tegund.hreinsunar)), fill=litir)
 ???
 Tegund skólphreinsunar skipt eftir fjórum flokkum náttúrulegra yfirborðsvatnshlota. Unnið upp úr samantekt á stöðu skólpmála á Íslandi árið 2014 [@Umhverfisstofnun2017].
 ---
-# Helstu uppsprettur örplasts
-```{r setup, include=FALSE}
+```{r include=FALSE}
 options(htmltools.dir.version = FALSE)
 ```
 
-```{r Sank, echo=FALSE, message=FALSE, warning=FALSE}
+```{r out.width='100%', fig.height=6, fig.width=10, eval=require('networkD3'), echo=FALSE}
 
-#losun <- (l+h)/2 #Meðaltal lægra og hærra mats á losun.
-value <- c(379, 41, 18.2+11.8+3.2, 3, 8.2, 0.34) #Uppspretta lægra mat
-losun <- c(164, 5.7, 12+3.2, 0.3, 8.2, 0.34) #losun lægra mat
-#value <- c(379,586,38,233,21,48,3,11,8,32,0.3,3)
-heiti <-c('Dekkjaslit','Vegmerkingar','Húsamálning','Gervigras','Þvottur','Snyrtivörur')
-land <- value-losun
-df <- data.frame(heiti,land,losun)
-df <- df[order(df$heiti),]
+slit=c(244,34,22,79) 
+losun=c(106,15,9,34)
+land=slit-losun
 
-library(networkD3)
-nodes <- c(levels(df$heiti), 'Land ','Haf ')
-nodes <- as.data.frame(nodes)
+
+A <- c("Fólksbifreiðar ","Sendibifreiðar ","Hópbifreiðar ","Vörubifreiðar ","Land ","Haf ")
+nodes <- as.data.frame(A)
 names(nodes) <- "name"
+#nodes$name <-  as.character(nodes$name)
+links <- data.frame(source=rep(0:3,2),target=rep(4:5, each=4),value=c(land,losun))
+rass <- list(nodes,links)
+names(rass) <- c('nodes','links')
+sn <- sankeyNetwork(Links = rass$links, Nodes = rass$nodes, Source = "source",
+                    Target = "target", Value = "value", NodeID = "name",
+                    units = "tonn", fontSize = 24, nodeWidth = 30, iterations = 0, width = "500px", height = "500px")
 
-a <- list()
-for (i in 1:nrow(df)) {
-  a[i] <- list(rbind(matrix(c(df[i,c(2,3)]))))
-}
-b <- do.call(c,a)
-value <- unlist(b)
-
-links <- 
-  data.frame(
-    source=c(0,0,1,1,2,2,3,3,4,4,5,5),
-    target=c(6,7,6,7,6,7,6,7,6,7,6,7),
-    value=value)
-
-
-Sank <- list(nodes, links)
-names(Sank) <- c('nodes', 'links')
-sn <- sankeyNetwork(
-  Links = Sank$links,
-  Nodes = Sank$nodes,
-  Source = "source",
-  Target = "target",
-  Value = "value",
-  NodeID = "name",
-  units = "tonn",
-  colourScale = JS("d3.scaleOrdinal(d3.schemeCategory20);"),
-  fontSize = 12,
-  nodeWidth = 30
-)
-#sn
-library(widgetframe)
-rammi <- frameWidget(sn)
-#if (knitr::is_html_output()) {
-  htmlwidgets::onRender(rammi, 'document.getElementsByTagName("svg")[0].setAttribute("viewBox", "")') #Svo að þetta sé ekki ofursmátt í Firefox
-#}
-
+rammi <- widgetframe::frameWidget(sn)
+rammi
 ```
 
 
-???
+---
+# Helstu uppsprettur örplasts2
+```{r include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
 
-Stærsta uppspretta örplasts í umhverfinu á Íslandi, sem lagt var mat á, er tengd bifreiðaumferð. Slit á dekkjum og vegmerkingum er um 60-85% örplastslosunar á Íslandi
+```{r SankB, echo=FALSE, message=FALSE, warning=FALSE}
+
+slit=c(244,34,22,79) 
+losun=c(106,15,9,34)
+land=slit-losun
+
+library(networkD3)
+A <- c("Fólksbifreiðar ","Sendibifreiðar ","Hópbifreiðar ","Vörubifreiðar ","Land ","Haf ")
+nodes <- as.data.frame(A)
+names(nodes) <- "name"
+#nodes$name <-  as.character(nodes$name)
+links <- data.frame(source=rep(0:3,2),target=rep(4:5, each=4),value=c(land,losun))
+rass <- list(nodes,links)
+names(rass) <- c('nodes','links')
+sn2 <- sankeyNetwork(Links = rass$links, Nodes = rass$nodes, Source = "source",
+                    Target = "target", Value = "value", NodeID = "name",
+                    units = "tonn", fontSize = 24, nodeWidth = 30, iterations = 0, width = "500px", height = "500px")
+
+sn
+
+
+```
+
+???
+Plís
 
 ---
+#Skólp
 class:middle
 .pull-left[
 ```{r umferdvisitala1, echo=FALSE, fig.align="center", fig.cap="Vísitala umferðar (línur) ásamt meðalumferðarþunga yfir árið (stöplar) í þremur völdum sniðum innan höfuðborgarsvæðisins og á 16 lykilteljurum á hringveginum.", message=FALSE, warning=FALSE, dev=switch(output(), html = "svg", latex = "pdf"), dev.args=list(bg="transparent"), out.width='100%' }

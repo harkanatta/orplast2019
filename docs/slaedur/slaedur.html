@@ -7,10 +7,13 @@
     <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
     <link href="libs/remark-css/duke-blue.css" rel="stylesheet" />
     <link href="libs/remark-css/hygge-duke.css" rel="stylesheet" />
-    <script src="libs/kePrint/kePrint.js"></script>
     <script src="libs/htmlwidgets/htmlwidgets.js"></script>
     <script src="libs/pymjs/pym.v1.js"></script>
     <script src="libs/widgetframe-binding/widgetframe.js"></script>
+    <script src="libs/kePrint/kePrint.js"></script>
+    <script src="libs/d3/d3.min.js"></script>
+    <script src="libs/sankey/sankey.js"></script>
+    <script src="libs/sankeyNetwork-binding/sankeyNetwork.js"></script>
     <link rel="stylesheet" href="libs\cc-fonts.css" type="text/css" />
     <link rel="stylesheet" href="libs\figure-captions.css" type="text/css" />
   </head>
@@ -21,9 +24,12 @@ class: center, middle, inverse, title-slide
 # Örplast í hafinu við Ísland
 ## Helstu uppsprettur, magn og farvegir í umhverfinu
 ### <span class="noem">Valtýr Sigurðsson</span> <br><br> <img src="myndir/biopollogo.png" width="15%" align="left" /> <img src="myndir/nnvlogo.png" width="15%" align="right" />
-### 4. September 2019
+### 5. September 2019
 
 ---
+
+
+
 
 class: center
 # Hvað er plast?
@@ -135,34 +141,27 @@ https://www.youtube.com/watch?v=BCNWav12PdI
 ---
 
 class:center, middle, inverse
-.Large[Fyrsta tilkynning um örplast 1972]
-&lt;img src="myndir/grndv1.png" width="100%" /&gt;
-
-???
-Árið 1972 (Carpender ofl.) var tilkynnt um pólýstýren í hafi sem hefðu bakteríur á yfirborði sínu. Áður hafði fólk lengi tekið eftir því hve plast var slitþolið og entist lengi í umhverfinu og að það fyndist í maga fugla og annarra dýra.
----
-
-class:center, middle, inverse
-.Large[Örplast í snyrtivörum 1991]
-&lt;img src="myndir/grndv2.png" width="100%" /&gt;
-???
-Árið 1991 kom út grein (eftir V. Zitko) þar sem bent var á að í snyrtivörum væru smáar plastagnir sem bærust í hafið
----
-
-class:center, middle, inverse
 .Large[Hugtakið „microplastic“ sett fram 2004]
-&lt;img src="myndir/grndv3.png" width="100%" /&gt;
+&lt;img src="myndir/thompson1930.png" width="100%" /&gt;
 
 ???
 Árið 2004 var hugtakið „microplastic“ sett fram (Thompson) í grein þar sem sýni úr sjávarseti voru skoðuð með litrófssjá og um 9 gerðir plasts fundust í þeim þ.á.m. úr fatnaði, pakkningum, reipum o.fl. Einnig voru þörungasýni ^[þörungasnið eru tekin úr efri lögum sjávar úti á opnu hafi sem og nærri ströndum] greind aftur í tímann til 1960 og í þeim sást skýrt að eftir því sem framleiðsla á plasti jókst fjölgaði plastögnum í hafinu.
+
+Árið 1972 (Carpender ofl.) var tilkynnt um pólýstýren í hafi sem hefðu bakteríur á yfirborði sínu. Áður hafði fólk lengi tekið eftir því hve plast var slitþolið og entist lengi í umhverfinu og að það fyndist í maga fugla og annarra dýra.
+
+Árið 1991 kom út grein (eftir V. Zitko) þar sem bent var á að í snyrtivörum væru smáar plastagnir sem bærust í hafið
+
 
 ---
 
 &lt;img src="slaedur_files/figure-html/pubtrend-1.png" width="60%" style="display: block; margin: auto;" /&gt;
 
 .large[
-Birtingar alþjóðlegra vísindagreina með örplast sem meginviðfangsefni á árunum 2008 til 2018. Fengið af vef [Web of Knowledge](https://webofknowledge.com).
+Birtingar alþjóðlegra vísindagreina með örplast sem meginviðfangsefni á árunum 2008 til 2018. 
 ]
+
+???
+Fengið af vef [Web of Knowledge](https://webofknowledge.com).
 ---
 
 background-image: url(myndir/samsett.png)
@@ -171,8 +170,12 @@ background-position: right
 
 class: left, middle
 
-###Hvað er örplast og &lt;br&gt;
-###Hvaðan kemur það?
+###Slit á hjólbörðum &lt;br&gt;
+###Vegmerkingar&lt;br&gt;
+###Plastframleiðsa &lt;br&gt;
+###Fatnaður&lt;br&gt;
+###Rusl  &lt;br&gt;
+###Snyrtivörur
 
 
 ???
@@ -224,6 +227,145 @@ Verður til við sundrun plasts í náttúrunni
 ---
 
 
+# Helstu uppsprettur örplasts
+
+<div id="htmlwidget-8930434117fe54255abb" style="width:100%;height:500px;" class="widgetframe html-widget"></div>
+<script type="application/json" data-for="htmlwidget-8930434117fe54255abb">{"x":{"url":"slaedur_files/figure-html//widgets/widget_Sank.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
+
+
+???
+
+Stærsta uppspretta örplasts í umhverfinu á Íslandi, sem lagt var mat á, er tengd bifreiðaumferð. Slit á dekkjum og vegmerkingum er um 60-85% örplastslosunar á Íslandi
+
+---
+class:inverse,center
+.Large[Dekkjaslit (dekkja- og vegaagnir)]
+&lt;img src="myndir/twp.png" width="75%" /&gt;
+???
+Dekkjaagnirnar sem myndast við akstur blandast öðrum ögnum sem eru í malbikinu og vegrykinu sem breytir efnasamsetningu agnanna81. Þessi blanda dekkja- og vegslits (e. tyre and road wear particles - TRWP) getur því til viðbótar innihaldið efni á borð við bik, þ.e. úr malbiki101, og ryk frá bremsuborðum/diskum102. Í þessari skýrslu er litið á gúmmíblönduna, ásamt öðrum bætiefnum sem er er blandað saman í slitlagi hjólbarða, sem eina heild óháð fjölliðuinnihaldi.
+
+---
+
+.pull-left[
+  &lt;img src="myndir/twp.png" width="100%" /&gt;
+]
+.pull-right[
+ ##Dekkjaslit
+
++ Gúmmísólar venjulegra bíldekkja eru gerðir úr blöndu af gervigúmmíi (aðallega stýren bútadíen gúmmí og ýmsum íblöndunarefnum)
+{{content}}
+
+]
+
+--
+
++ Agnirnar eru á bilinu 10-100 µm (stærra en svifryk)
+{{content}}
+
+--
+
++ Berast með affallsvatni til sjávar
+{{content}}
+
+--
+
+    + gegnum ræsi í þéttbýli
+    + með ám og lækjum
+
+--
+
++ Mest umferð í þéttbýli - hátt hlutfall dekkjaslits berst til hafs
+--
+
++ Dreifbýli - hverfandi magn berst til hafs.
+---
+# Dekkjaslit
+
+- Gúmmísólar venjulegra bíldekkja eru gerðir úr blöndu af gervigúmmíi (aðallega stýren bútadíen gúmmí og ýmsum íblöndunarefnum)
+
+--
+
+- Agnir á bilinu 10-100 µm (stærra en svifryk)
+
+--
+
+- Agnir á bilinu 10-100 µm (stærra en svifryk)
+
+???
+Hlutfall plastfjölliða í slitlagi hjólbarða er á bilinu 40-60%
+---
+
+---
+&lt;table&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt;   &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Fólksbifreið &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Sendibifreið &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Hópbifreið &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Vörubifreið &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Fjöldi &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 227409 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 23159 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2410 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 8078 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Meðalþyngd (t) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2,05 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 2,66 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 9,75 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 17,18 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Meðalakstur (þús. km/ár) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 12,6 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 14,25 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 33,69 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 17,83 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Slit (mg/km) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 85-132 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 102-159 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 267-415 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 546-850 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Slit (t/ár) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 244-378 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 34-52 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 22-34 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 79-122 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Losun í hafið (t/ár) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 97-151 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 13-21 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 9-13 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; 31-49 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+
+---
+
+
+
+
+
+<div id="htmlwidget-dec165a789c36fc9e38c" style="width:100%;height:500px;" class="widgetframe html-widget"></div>
+<script type="application/json" data-for="htmlwidget-dec165a789c36fc9e38c">{"x":{"url":"slaedur_files/figure-html//widgets/widget_unnamed-chunk-10.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
+
+
+???
+Dekkjaslit
+---
 
 class:center, middle
 .Large[Örplast á reki í hafinu]
@@ -386,18 +528,24 @@ class: center, middle
 ???
 Tegund skólphreinsunar skipt eftir fjórum flokkum náttúrulegra yfirborðsvatnshlota. Unnið upp úr samantekt á stöðu skólpmála á Íslandi árið 2014 [@Umhverfisstofnun2017].
 ---
-# Helstu uppsprettur örplasts
 
 
-<div id="htmlwidget-340609e7251d9e935f0f" style="width:100%;height:504px;" class="widgetframe html-widget"></div>
-<script type="application/json" data-for="htmlwidget-340609e7251d9e935f0f">{"x":{"url":"slaedur_files/figure-html//widgets/widget_Sank.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":{"render":[{"code":"document.getElementsByTagName(\"svg\")[0].setAttribute(\"viewBox\", \"\")","data":null}]}}</script>
+<div id="htmlwidget-c664e23e37569fe6ca48" style="width:100%;height:500px;" class="widgetframe html-widget"></div>
+<script type="application/json" data-for="htmlwidget-c664e23e37569fe6ca48">{"x":{"url":"slaedur_files/figure-html//widgets/widget_unnamed-chunk-17.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
 
-
-???
-
-Stærsta uppspretta örplasts í umhverfinu á Íslandi, sem lagt var mat á, er tengd bifreiðaumferð. Slit á dekkjum og vegmerkingum er um 60-85% örplastslosunar á Íslandi
 
 ---
+# Helstu uppsprettur örplasts2
+
+
+<div id="htmlwidget-854b882ed2f5c85ab99f" style="width:500px;height:500px;" class="sankeyNetwork html-widget"></div>
+<script type="application/json" data-for="htmlwidget-854b882ed2f5c85ab99f">{"x":{"links":{"source":[0,1,2,3,0,1,2,3],"target":[4,4,4,4,5,5,5,5],"value":[138,19,13,45,106,15,9,34]},"nodes":{"name":["Fólksbifreiðar ","Sendibifreiðar ","Hópbifreiðar ","Vörubifreiðar ","Land ","Haf "],"group":["Fólksbifreiðar ","Sendibifreiðar ","Hópbifreiðar ","Vörubifreiðar ","Land ","Haf "]},"options":{"NodeID":"name","NodeGroup":"name","LinkGroup":null,"colourScale":"d3.scaleOrdinal(d3.schemeCategory20);","fontSize":24,"fontFamily":null,"nodeWidth":30,"nodePadding":10,"units":"tonn","margin":{"top":null,"right":null,"bottom":null,"left":null},"iterations":0,"sinksRight":true}},"evals":[],"jsHooks":[]}</script>
+
+???
+Plís
+
+---
+#Skólp
 class:middle
 .pull-left[
 &lt;div class="figure" style="text-align: center"&gt;

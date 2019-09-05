@@ -5,3 +5,6 @@ leaflet
 DT
 plyr
 networkD3
+RColorBrewer
+htmlwidgets
+widgetframe
