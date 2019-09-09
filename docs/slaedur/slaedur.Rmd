@@ -177,9 +177,9 @@ knitr::include_graphics("myndir/thompson1930.png")
 ???
 Árið 2004 var hugtakið „microplastic“ sett fram (Thompson) í grein þar sem sýni úr sjávarseti voru skoðuð með litrófssjá og um 9 gerðir plasts fundust í þeim þ.á.m. úr fatnaði, pakkningum, reipum o.fl. Einnig voru þörungasýni ^[þörungasnið eru tekin úr efri lögum sjávar úti á opnu hafi sem og nærri ströndum] greind aftur í tímann til 1960 og í þeim sást skýrt að eftir því sem framleiðsla á plasti jókst fjölgaði plastögnum í hafinu.
 
-Árið 1972 (Carpender ofl.) var tilkynnt um pólýstýren í hafi sem hefðu bakteríur á yfirborði sínu. Áður hafði fólk lengi tekið eftir því hve plast var slitþolið og entist lengi í umhverfinu og að það fyndist í maga fugla og annarra dýra.
-
 Árið 1991 kom út grein (eftir V. Zitko) þar sem bent var á að í snyrtivörum væru smáar plastagnir sem bærust í hafið
+
+Árið 1972 (Carpender ofl.) var tilkynnt um pólýstýren í hafi sem hefðu bakteríur á yfirborði sínu. Áður hafði fólk lengi tekið eftir því hve plast var slitþolið og entist lengi í umhverfinu og að það fyndist í maga fugla og annarra dýra.
 
 
 ---
@@ -274,7 +274,7 @@ Verður til við sundrun plasts í náttúrunni
 ]]
 
 ???
-Skilgreiningar munu kvíslast og örplast raðast eftir stærð og gerð; þræðir, agnir kúlur ofl.
+Skilgreiningar munu kvíslast þegar á líður og örplast raðast eftir stærð og gerð; þræðir, agnir kúlur ofl. ...Aukaatriði...?
 
 ---
 class:center, middle
@@ -377,21 +377,31 @@ Mynd birt með góðfúslegu leyfi Alta
 options(htmltools.dir.version = FALSE)
 ```
 
-# Helstu uppsprettur örplasts á Íslandi
+### Helstu uppsprettur örplasts á Íslandi
 
 ```{r Sank, echo=FALSE, message=FALSE, warning=FALSE}
 
 #losun <- (l+h)/2 #Meðaltal lægra og hærra mats á losun.
-value <- c(379, 41, 18.2+11.8+3.2, 3, 8.2, 0.34) #Uppspretta lægra mat
-losun <- c(164, 5.7, 12+3.2, 0.3, 8.2, 0.34) #losun lægra mat
+value <- c(371, 41, 26, 33.2, 60, 3, 0.2, 8.2, 0.34, 1, 0.002) #Uppspretta lægra mat
+losun <- c(164, 5.7,  0, 15.2, 3.2, 0.3, 0, 8.2, 0.34, 0, 0.002) #losun lægra mat
 #value <- c(379,586,38,233,21,48,3,11,8,32,0.3,3)
-heiti <-c('Dekkjaslit','Vegmerkingar','Húsamálning','Gervigras','Þvottur','Snyrtivörur')
+heiti <- c('Bifreiðahjólbarðar',
+          'Vegmerkingar',
+          'Flugvélahjólbarðar',
+          'Húsamálning',
+          'Skipamálning',
+          'Gervigras',
+          'Leikvellir',
+          'Þvottur',
+          'Snyrtivörur',
+          'Haglaskot',
+          'Sigvatn')
 land <- value-losun
 df <- data.frame(heiti,land,losun)
 df <- df[order(df$heiti),]
 
 library(networkD3)
-nodes <- c(levels(df$heiti), 'Land ','Haf ')
+nodes <- c(levels(df$heiti), 'Land','Haf')
 nodes <- as.data.frame(nodes)
 names(nodes) <- "name"
 
@@ -404,8 +414,8 @@ value <- unlist(b)
 
 links <- 
   data.frame(
-    source=c(0,0,1,1,2,2,3,3,4,4,5,5),
-    target=c(6,7,6,7,6,7,6,7,6,7,6,7),
+    source=c(0,0,1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10),
+    target=c(rep(c(11,12),11)),
     value=value)
 
 
@@ -420,7 +430,7 @@ sn <- sankeyNetwork(
   NodeID = "name",
   units = "tonn",
   colourScale = JS("d3.scaleOrdinal(d3.schemeCategory20);"),
-  fontSize = 28,
+  fontSize = 20,
   nodeWidth = 30, width = "500px", height = "500px", fontFamily = "Courier"
 )
 #sn
@@ -433,7 +443,9 @@ rammi
 
 ???
 
-Stærsta uppspretta örplasts í umhverfinu á Íslandi, sem lagt var mat á, er tengd bifreiðaumferð. Slit á dekkjum og vegmerkingum er um 60-85% örplastslosunar á Íslandi
+Stærsta uppspretta örplasts í umhverfinu á Íslandi, sem lagt var mat á, er tengd bifreiðaumferð. Slit á dekkjum og vegmerkingum er um 60-85% örplastslosunar á Íslandi. 
+Næst þar á eftir kemur húsamálning
+Skipamálning í stóru slippunum er stór uppspretta í mikilli nálægð við hafið (fer eftir vinnubrögðum við málun og ekki síst þrif hversu mikið lendir í hafinu)
 
 ---
 class:inverse,center
@@ -441,7 +453,9 @@ background-image: url(myndir/dekkjaslit.png)
 #Dekkjaslit
 
 ???
-Dekkjaagnirnar sem myndast við akstur blandast öðrum ögnum sem eru í malbikinu og vegrykinu sem breytir efnasamsetningu agnanna81. Þessi blanda dekkja- og vegslits (e. tyre and road wear particles - TRWP) getur því til viðbótar innihaldið efni á borð við bik, þ.e. úr malbiki101, og ryk frá bremsuborðum/diskum102. Í þessari skýrslu er litið á gúmmíblönduna, ásamt öðrum bætiefnum sem er er blandað saman í slitlagi hjólbarða, sem eina heild óháð fjölliðuinnihaldi.
+Dekkjaagnirnar sem myndast við akstur blandast öðrum ögnum sem eru í malbikinu og vegrykinu sem breytir efnasamsetningu agnanna. Þessi blanda dekkja- og vegslits (e. tyre and road wear particles - TRWP) getur því til viðbótar innihaldið efni á borð við bik, þ.e. úr malbiki, og ryk frá bremsuborðum/diskum. 
+
+Í þessari skýrslu er litið á gúmmíblönduna, ásamt öðrum bætiefnum sem er er blandað saman í slitlagi hjólbarða, sem eina heild óháð fjölliðuinnihaldi.
 
 ---
 ## Dekkja- og vegaagnir
@@ -643,12 +657,12 @@ Mismunandi hlutfall plastefna (meira í málningu en mössun)
 + Berast með affallsvatni til sjávar:
 {{content}}
 
-
+--
 
     + gegnum ræsi í þéttbýli
     + með ám og lækjum
 
-
+--
 
 + Mest umferð í þéttbýli - hátt hlutfall dekkjaslits berst til hafs
 
