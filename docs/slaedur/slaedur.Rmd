@@ -24,7 +24,19 @@ output:
       highlightLines: true
       countIncrementalSlides: false
 ---
+background-image: url(myndir/bakgrunnur.png)
+class:middle
 
+
+
+
+## Kynning á efni skýrslunnar:
+### [„Örplast í hafinu við Ísland - Helstu uppsprettur, magn og farvegir í umhverfinu“](https://harkanatta.github.io/UAR-skyrsla/). 
+
+Ýtið á „p“" til að sjá nótur og vísanir í myndir *sé kynningin á html-formi* en annars bendi ég á [vefsvæði kynningarinnar `r anicon::faa("github", animate="float")`](https://github.com/harkanatta/orplast2019)
+???
+Unnið með í R með [Xaringan](https://slides.yihui.name/xaringan/) eftir [Dukeslides](https://github.com/libjohn/dukeslides) `r anicon::faa("leaf", animate="burst")`
+---
 
 
 class: center
@@ -169,10 +181,13 @@ Algengustu plastefnin eru flokkuð í 6 algengustu gerðir plasts en allt annað
 ---
 
 class:center, middle, inverse
+
 #Hugtakið „microplastic“ sett fram 2004
-```{r echo=FALSE, message=FALSE, warning=FALSE, out.width='100%'}
-knitr::include_graphics("myndir/thompson1930.png")
-```
+
+<figure>
+  <img src="myndir/thompson1930.png">
+</figure>
+
 
 ???
 Árið 2004 var hugtakið „microplastic“ sett fram (Thompson) í grein þar sem sýni úr sjávarseti voru skoðuð með litrófssjá og um 9 gerðir plasts fundust í þeim þ.á.m. úr fatnaði, pakkningum, reipum o.fl. Einnig voru þörungasýni ^[þörungasnið eru tekin úr efri lögum sjávar úti á opnu hafi sem og nærri ströndum] greind aftur í tímann til 1960 og í þeim sást skýrt að eftir því sem framleiðsla á plasti jókst fjölgaði plastögnum í hafinu.
@@ -546,7 +561,7 @@ knitr::kable(bifreidar, booktabs=T)
 <br>
 <br>
 .content-box-red[.justify-center[
-Áætluð heildarlosun örplasts í hafið frá sliti bifreiðahjólbarða á Íslandi er .bolder[164-255] tonn.
+Áætluð heildarlosun örplasts í hafið frá sliti bifreiðahjólbarða á Íslandi ≈ .bolder[164-255] tonn.
 ]]
 
 ---
@@ -718,7 +733,7 @@ options(htmltools.dir.version = FALSE)
 
 
 
-```{r  echo=FALSE, message=FALSE, warning=FALSE, fig.cap="Skipting örplastlosunar frá vegmerkingum eftir notendum (stærri og minni sveitarfélög og Vegagerðin) og gerð (sprautuplast/vegamálning)."}
+```{r  echo=FALSE, message=FALSE, warning=FALSE, fig.cap="Skipting örplastlosunar frá vegmerkingum eftir notendum (stærri og minni sveitarfélög og Vegagerðin), gerð (sprautuplast/vegamálning) og afdrifum."}
 
 nodes <- c('Stærri sveitarfélög ','Minni sveitarfélög ','Vegagerðin ','Sprautuplast ','Vegamálning ','Uppspretta (LM) ','Uppspretta (HM) ','Losun í haf (LM)','Losun í haf (HM)')
 nodes <- as.data.frame(nodes)
@@ -756,16 +771,15 @@ Miðað við útboðsgögn nokkurra stórra sveitarfélaga er notkun sprautuplas
 class:inverse,center
 background-image: url(myndir/37335569_10156265971825042_1132775165936009216_n.jpg)
 .content-box-red[.justify-center[
-#Málning
+# Málning
 ]]
---
-.content-box-red[
-+ Mest er innflutt af akrýl- og vínylblandaðri málningu til landsins til notkunar innanhúss og utan
-{{content}}
-]
+
+
+
 ???
-Innflutt málning árin 2016 og 2017 var 3.15 þúsund tonn á ári111 eða um 9,3 kg á mann (hér er ekki tekið með efni sem notuð eru til framleiðslu á málningu hérlendis). Þetta er af sömu stærðargráðu og mat Hann106 um málningarnotkun á mann í Evrópusambandsríkjunum (um 8,2 kg). Hér er átt við innflutta tilbúna málningu en innlend framleiðsla er undanskilin.8
+Innflutt málning árin 2016 og 2017 var 3.15 þúsund tonn á ári eða um 9,3 kg á mann (hér er ekki tekið með efni sem notuð eru til framleiðslu á málningu hérlendis). Þetta er af sömu stærðargráðu og mat Hann106 um málningarnotkun á mann í Evrópusambandsríkjunum (um 8,2 kg). Hér er átt við innflutta tilbúna málningu en innlend framleiðsla er undanskilin.
 ---
+
 class:middle
 ## Utanhússmálning
 .pull-left[
@@ -779,45 +793,51 @@ knitr::include_graphics("myndir/thok.png")
 .pull-right[
 
 
-+ Losun örplasts vegna háþrýstiþvotta og flögnunar, slits og veðrunar
++ Losun örplasts vegna:
 {{content}}
 
 ]
 
 --
+    + háþrýstiþvotta og flögnunar
+    + slits og veðrunar
+{{content}}
+--
 
 
-+ Berast með affallsvatni til sjávar
++ Berst með affallsvatni til sjávar:
 {{content}}
 
 --
 
     + gegnum ræsi í þéttbýli
     + með ám og lækjum
-
+{{content}}
 --
 
-+ Sundrun vegna sólarljóss
++ Talsverð sundrun vegna sólarljóss
 
 ???
 Líftími er langur og því er sundrun talin umtalsverð (67%)
+
+[Mynd](https://www.google.com/search?q=m%C3%A1lu%C3%B0+%C3%BE%C3%B6k&rlz=1C1PRFI_enIS798IS798&sxsrf=ACYBGNSWLEUI-GLcfRxGAeJ-T8KN5b_4bw:1567755115475&source=lnms&tbm=isch&sa=X&ved=0ahUKEwi9soL21rvkAhUhShUIHVArCh8Q_AUIEigB&biw=1522&bih=738&dpr=1.25#imgrc=2M7d-lx1So8SzM:)
 --
 
-+ Dreifbýli - hverfandi magn berst til hafs.
-<br>
-<br>
-.content-box-red[.justify-center[Áætluð losun örplasts í hafið .bolder[12-29] tonn.]]
+.footnote[.content-box-red[Áætluð losun örplasts í hafið frá utanhússmálningu ≈ .bolder[12-29] tonn.]]
 
 
 ---
 
 
-class:inverse,center
+class:inverse
 background-image: url(myndir/burstathrif.png)
 .content-box-red[.justify-right[
 ## Innimálning
 ]]
 ]
+
+???
+Aðeins við þrif á penslum
 --
 
 .pull-right[.content-box-red[
@@ -826,17 +846,17 @@ background-image: url(myndir/burstathrif.png)
 + Þrif á penslum fer beina leið í sjóinn með fráveitu
 {{content}}
 
-+ Áætluð heildarlosun örplasts frá innimálningu á ári: .bolder[3,2-7,1] tonn
-{{content}}
-
 ]]
+
+
+.footnote[.content-box-red[ Áætluð heildarlosun örplasts frá innimálningu á ári ≈ .bolder[3,2-7,1] tonn]]
 
 
 ???
 [mynd](https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjC-MfL37vkAhXkyYUKHdHUBMYQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DiWJFcHl7PrA&psig=AOvVaw3l1ZV59vQXuOtrs_zsQZB7&ust=1567843829991092)
 
 ---
-```{r echo=FALSE, fig.cap="Áætluð árleg heildarlosun örplasts frá húsamálningu er 15,2-36,1 tonn.", message=FALSE, warning=FALSE, fig.align='center'}
+```{r echo=FALSE, fig.cap="Skipting örplastlosunar frá húsamálningu eftir afdrifum í haf eða á land", message=FALSE, warning=FALSE, fig.align='center'}
 library(networkD3)
 nodes <- c("Útimálning","Innimálning",'Land','Haf')
 nodes <- as.data.frame(nodes)
@@ -876,40 +896,6 @@ background-image: url(myndir/slippur.jpg)
 Mikill munur á mögulegri uppsprettu og losun í hafið var frá stærstu slippunum en að sögn starfsmanna nokkurra slippa er nánast allt hreinsað upp sem fellur til vegna viðhalds skipa
 ---
 class:middle
-## Skipamálning (slippir)
-.pull-left[
-  ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width='100%'}
-knitr::include_graphics("myndir/slippur.png")
-#[Mynd](https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjQ86Wr4rvkAhUPyxoKHSGNCTwQjRx6BAgBEAQ&url=https%3A%2F%2Fhiveminer.com%2FTags%2Fhbgrandi%252Creykjav%25C3%25ADk&psig=AOvVaw3BAsWkHoyIGgn259DEBNeO&ust=1567844568638716)
-```
-]
-
-
-???
-[mynd](https://hiveminer.com/Tags/hbgrandi%2Creykjav%C3%ADk) 
---
-.pull-right[
-
-
-+ Líklega í um 100 stór skip í slipp árlega
-{{content}}
-
-]
-
---
-
-
-+ örplastlosunin mögulega 0,6-2,6 t af á skip 
-{{content}}
-+ ≈ 60 - 260 tonn/ári sem þarf að hreinsa upp
-{{content}}
-
-???
-Starfsmenn slippanna segja að allt sé þrifið upp en segjast einnig bara geta talað fyrir sinn slipp
-Ekkert er þrifið upp í minni brautum
-
----
-class:middle
 
 ```{r slippur, echo=FALSE, message=FALSE, warning=FALSE, fig.show='hold',out.width = '50%', dev.args=list(bg="transparent"),fig.cap='Samband skipslengdar og botnflatar. Kökuritið sýnir hlutfall botnflatar íslenskra fiskiskipa í þremur stærðarflokkum', fig.align='center' }
 par(mar = c(4.6, 6, 0, 0))
@@ -946,38 +932,50 @@ legend("topleft",c("Smábátar <15m. N=972","Miðlungs N=75","Stór skip >30m. N
 par(mar = c(0, 0, 0, 0))
 require(plyr)
 kaka <- ddply(Batar,.(gerd),summarise,Flatarmal=sum(WSA))
-pie(kaka$Flatarmal,labels = kaka$gerd, border="grey",col = c("transparent",liturb,litura),cex=2)
+pie(kaka$Flatarmal,labels = kaka$gerd, border="grey",col = c("transparent",liturb,litura),cex=2,radius = 0.6)
 ```
 
 ???
 Undir 15 metra löng skip, milli 15 og 30 metra löng og yfir 30 metra löng. Fengið með jöfnu frá Moser (2016).
 
 ---
-
 class:middle
-## Framleiðsla (frumplast)
+## Skipamálning (slippir)
 .pull-left[
   ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width='100%'}
-knitr::include_graphics("myndir/Plastic_pellets.jpg")
+knitr::include_graphics("myndir/slippur.png")
+#[Mynd](https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjQ86Wr4rvkAhUPyxoKHSGNCTwQjRx6BAgBEAQ&url=https%3A%2F%2Fhiveminer.com%2FTags%2Fhbgrandi%252Creykjav%25C3%25ADk&psig=AOvVaw3BAsWkHoyIGgn259DEBNeO&ust=1567844568638716)
 ```
 ]
 
+
+???
+[mynd](https://hiveminer.com/Tags/hbgrandi%2Creykjav%C3%ADk) 
+--
 .pull-right[
 
 
-+ Fiskikör, heitir pottar, trefjaplastbátar
-
-+ Innflutt 12 t af frumplasti af ýmsum gerðum
-
-+ Möguleg slys við flutninga
-
-+ Litlu magni sópað í niðurföll
++ Líklega í um 100 stór skip í slipp árlega
+{{content}}
 
 ]
 
+--
+
+
++ örplastlosunin mögulega 0,6-2,6 tonn á skip (vegna háþrýstiþvottar og sprautunar á málningu undir berum himni)
+{{content}}
++ Uppspretta ≈ 60 - 260 tonn/ári 
+{{content}}
++ Losun í haf ≈ 3 tonn (miðað við óbein gögn, þarf að kanna aðstæður betur)
+{{content}}
+
 ???
-Upplausnir, þeytur og deig
+Starfsmenn slippanna segja að allt sé þrifið upp en segjast einnig bara geta talað fyrir sinn slipp
+Ekkert er þrifið upp í minni brautum
+
 ---
+
 
 class:middle
 ## Þvottur
@@ -1004,7 +1002,7 @@ knitr::include_graphics("myndir/DEFALCO2018.jpg")
 
 --
 
-+ Hlutfall gerviefna í þvotti	30-50	% gerviefni (fer hækkandi)
++ Hlutfall gerviefna í þvotti	30-50% gerviefni (fer hækkandi)
 {{content}}
 --
 
@@ -1043,10 +1041,36 @@ kable(lina,align = "c", caption = 'Áætluð árleg losun örplasts frá þvotti
 <br>
 <br>
 .content-box-red[.justify-center[
-Áætluð heildarlosun örplasts frá þvotti á Íslandi á ári er því .bold[8,2-32] tonn
+Áætluð heildarlosun örplasts frá þvotti á Íslandi á ári ≈ .bold[8,2-32] tonn
 ]]
 
 ---
+class:middle
+## Framleiðsla (frumplast)
+.pull-left[
+  ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width='100%'}
+knitr::include_graphics("myndir/Plastic_pellets.jpg")
+```
+]
+
+.pull-right[
+
+
++ Fiskikör, heitir pottar, trefjaplastbátar
+
++ Innflutt 12 tonn af frumplasti af ýmsum gerðum
+
++ Örplastlosun í haf:
+    + Möguleg slys við flutninga
+    + Litlu magni sópað í niðurföll
+
+
+]
+
+???
+Upplausnir, þeytur og deig
+---
+
 
 class:middle
 ## Veiðarfæri
@@ -1058,7 +1082,7 @@ knitr::include_graphics("myndir/veidarf.png")
 .pull-right[
 
 
-+ Hátt í 7.000 t í umferð
++ Hátt í 7.000 tonn í umferð
 {{content}}
 
 ]
@@ -1093,7 +1117,7 @@ knitr::include_graphics("myndir/heyrullur.jpg")
 
 + 1.700 tonnum skilað í móttöku
 
-+ 300 tonn
++ 300 tonn:
     + urðun?
     + umhverfi?
 
@@ -1155,34 +1179,13 @@ plot(factor(ldf$Efni), ldf$fjoldi,ylab="Fjöldi hluta")
 
 + Gögn vantar
 
++ OSPAR skráir fjölda en ekki vigt
+
 
 ]
 
 ???
 Orkumikil kerfi sem virka eins og myllur fyrir örplast
-
-
----
-
-class:middle
-## Snyrtivörur
-.pull-left[
-  ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width='100%'}
-knitr::include_graphics("myndir/microbeads-landscape-620x492.jpg")
-```
-]
-
-.pull-right[
-
-
-+ undir 10 grömmum á ári á mann á ári
-
-+ Aðallega í handsápum sem eru ætlaðar til nota í iðnaði (t.d. á vélaverkstæðum)
-
-.content-box-red[Áætluð heildarlosun örplasts í hafið frá snyrtivörum á Íslandi er því .bolder[0,34-3,4] tonn.
-
-]]
-
 
 ---
 
@@ -1268,4 +1271,29 @@ rammi <- frameWidget(sn)
 rammi
 ```
 
+---
 
+class:middle
+## Snyrtivörur
+.pull-left[
+  ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width='100%'}
+knitr::include_graphics("myndir/microbeads-landscape-620x492.jpg")
+```
+]
+
+.pull-right[
+
+
++ undir 10 grömmum á mann á ári
+
++ Aðallega í handsápum sem eru ætlaðar til nota í iðnaði (t.d. á vélaverkstæðum)
+
+.content-box-red[Áætluð heildarlosun örplasts í hafið frá snyrtivörum á Íslandi ≈ .bolder[0,34-3,4] tonn.
+
+]]
+
+
+
+???
+file_name <- paste0("file://", normalizePath("slaedur.html"))
+pagedown::chrome_print(file_name)
